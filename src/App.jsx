@@ -15,32 +15,37 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import uroBackground from './assets/uroBackground.jpg'
+import home from './assets/home.png'
+import icon from './assets/big-brand-icon.jpg'
+import Screenshot3 from './assets/Screenshot3.png'
+import headshot from './assets/headshot.jpg'
 
 const cards = [{
   title: "Uro's Journey",
   description: 'Browser based platform game.',
-  image: 'https://source.unsplash.com/random?wallpapers',
+  image: uroBackground,
   appLink: 'https://samuelbaird.github.io/Uros-Journey/',
   codeLink: 'https://github.com/samuelbaird/Uros-Journey'
 },
   {
     title: 'SyncedIn',
     description: 'Job search app that matches employers and seekers based on matching skills.',
-    image: 'https://source.unsplash.com/random?wallpapers',
+    image: home,
     appLink: 'https://syncedin2-d40349e12dd2.herokuapp.com/',
     codeLink: 'https://github.com/kenneychan/SyncedIn'
   },
   {
     title: 'FitBuddy', 
     description: 'Fitness app that allows users to build and track custom workouts, plan bike and run routes, and select from a database of exercises.',
-    image: 'https://source.unsplash.com/random?wallpapers',
+    image: icon,
     appLink: 'https://fitbuddy-app-b650cc5e2b80.herokuapp.com/',
     codeLink: 'https://github.com/samuelbaird/FitBuddy'
   },
   {
     title: 'PlaybookProphet',
     description: 'Statistical projection app for fantasy football players.',
-    image: 'https://source.unsplash.com/random?wallpapers',
+    image: Screenshot3,
     appLink: 'https://playbookprophet-8d84a7dcc6b8.herokuapp.com/',
    }];
 
@@ -62,14 +67,12 @@ export default function Portfolio() {
       <CssBaseline />
       <AppBar position="relative" color="primary">
         <Toolbar>
-          <CameraIcon sx={{ mr: 2 }} />
           <Typography variant="h6" color="inherit" noWrap>
-            Album layout
+            Software Engineering Portfolio
           </Typography>
         </Toolbar>
       </AppBar>
       <main>
-        {/* Hero unit */}
         <Box
           sx={{
             bgcolor: 'background.paper',
@@ -77,7 +80,7 @@ export default function Portfolio() {
             pb: 6,
           }}
         >
-          <Container maxWidth="sm">
+          <Container maxWidth="lg">
             <Typography
               component="h1"
               variant="h2"
@@ -87,9 +90,32 @@ export default function Portfolio() {
             >
               Samuel Baird
             </Typography>
-            <Typography variant="h7" align="center" color="text.secondary" paragraph>
-              I am a Full Stack Software Engineer who brings a diverse background in music, art, and entrepreneurship to the table. I offer a unique blend of creativity and technical expertise to every project. In my previous career, I developed the ability to communicate clearly, solve problems creatively, and deliver products that made an impact in people's lives. I aspire to utilize my problem-solving abilities, meticulous attention to detail, and talent for bridging the gap between artistic expression and technical precision to contribute to cutting-edge projects that are both beautiful and impactful.
-            </Typography>
+<Box sx={{ display: 'flex', alignItems: 'center', mb: 2, width: '100%' }}>
+  <img 
+    src={headshot} 
+    alt="Profile" 
+    style={{
+      borderRadius: '50%', 
+      width: '400px', 
+      height: '400px',
+      marginRight: '20px',
+      border: '2px solid #2E3B55',
+    }} 
+  />
+  <Typography 
+    sx={{ 
+      flex: 6,  // Adjust this value to allocate more width to the text
+      textAlign: 'left', 
+      marginRight: '20px',
+    }} 
+    variant="h6"  // Adjusted variant from h7 to h6 for better readability
+    color="textSecondary" 
+    paragraph
+  >
+    I am a Full Stack Software Engineer who brings a diverse background in music, art, and entrepreneurship to the table. I offer a unique blend of creativity and technical expertise to every project. In my previous career, I developed the ability to communicate clearly, solve problems creatively, and deliver products that made an impact in people's lives. I aspire to utilize my problem-solving abilities, meticulous attention to detail, and talent for bridging the gap between artistic expression and technical precision to contribute to cutting-edge projects that are both beautiful and impactful.
+  </Typography>
+</Box>
+
             <Stack
               sx={{ pt: 4 }}
               direction="row"
@@ -119,7 +145,7 @@ export default function Portfolio() {
                       // 16:9
                       pt: '56.25%',
                     }}
-                    image="https://source.unsplash.com/random?wallpapers"
+                    image={card.image}
                   />
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography gutterBottom variant="h5" component="h2">
