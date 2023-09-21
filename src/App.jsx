@@ -51,10 +51,10 @@ const cards = [{
 const customTheme = createTheme({
   palette: {
     primary: {
-      main: '#2E3B55', // a deep blue shade
+      main: '#2E3B55', 
     },
     secondary: {
-      main: '#D1D9E1', // a light gray shade
+      main: '#D1D9E1', 
     },
   },
 });
@@ -103,11 +103,11 @@ export default function Portfolio() {
   />
   <Typography 
     sx={{ 
-      flex: 6,  // Adjust this value to allocate more width to the text
+      flex: 6,  
       textAlign: 'left', 
       marginRight: '20px',
     }} 
-    variant="h6"  // Adjusted variant from h7 to h6 for better readability
+    variant="h6"  
     color="textSecondary" 
     paragraph
   >
