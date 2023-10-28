@@ -26,3 +26,19 @@ footer {
 .MuiCardActions-root {
   margin-top: auto;
 }
+
+.section {
+  height: 100vh;
+  scroll-snap-align: center;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

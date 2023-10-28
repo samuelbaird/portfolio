@@ -1,5 +1,4 @@
 import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -9,7 +8,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
@@ -19,6 +17,8 @@ import home from './assets/home.png'
 import icon from './assets/big-brand-icon.jpg'
 import Screenshot3 from './assets/Screenshot3.png'
 import headshot from './assets/headshot.jpg'
+import './App.css';
+import CustomAppBar from './components/AppBar/AppBar';
 
 const cards = [{
   title: "Uro's Journey",
@@ -64,14 +64,11 @@ export default function Portfolio() {
   return (
     <ThemeProvider theme={customTheme}>
       <CssBaseline />
-      <AppBar position="relative" color="primary">
-        <Toolbar>
-          <Typography variant="h6" color="inherit" noWrap>
-            Software Engineering Portfolio
-          </Typography>
-        </Toolbar>
-      </AppBar>
-      <main>
+      <div>
+        <CustomAppBar />
+      </div>
+      {/* Hero unit */}
+      <div className='section'>
         <Box
           sx={{
             bgcolor: 'background.paper',
@@ -112,9 +109,8 @@ export default function Portfolio() {
     paragraph
   >
     I am a Full Stack Software Engineer who brings a diverse background in music, art, and entrepreneurship to the table. I offer a unique blend of creativity and technical expertise to every project. In my previous career, I developed the ability to communicate clearly, solve problems creatively, and deliver products that made an impact in people's lives. I aspire to utilize my problem-solving abilities, meticulous attention to detail, and talent for bridging the gap between artistic expression and technical precision to contribute to cutting-edge projects that are both beautiful and impactful.
-  </Typography>
-</Box>
-
+              </Typography>
+              </Box>
             <Stack
               sx={{ pt: 4 }}
               direction="row"
@@ -130,6 +126,8 @@ export default function Portfolio() {
             </Stack>
           </Container>
         </Box>
+      </div>
+      <div className='section'>
         <Container sx={{ py: 8 }} maxWidth="md">
           {/* End hero unit */}
           <Grid container spacing={4}>
@@ -167,7 +165,7 @@ export default function Portfolio() {
             ))}
           </Grid>
         </Container>
-      </main>
+      </div>
       {/* Footer */}
       <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
 
