@@ -1,0 +1,19 @@
+.appbar {
+    height: 100px;
+    background-color: #2E3B55;
+
+    .wrapper {
+        max-width: 1366px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    span {
+        font-size: 30px;
+        font-weight: 700;
+        color: lightgray;
+    }
+}

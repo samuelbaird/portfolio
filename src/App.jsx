@@ -17,7 +17,7 @@ import home from './assets/home.png'
 import icon from './assets/big-brand-icon.jpg'
 import Screenshot3 from './assets/Screenshot3.png'
 import headshot from './assets/headshot.jpg'
-import './App.css';
+import './App.scss';
 import CustomAppBar from './components/AppBar/AppBar';
 
 const cards = [{
@@ -64,10 +64,9 @@ export default function Portfolio() {
   return (
     <ThemeProvider theme={customTheme}>
       <CssBaseline />
-      <div>
+      <div className="section" id="About">
         <CustomAppBar />
       </div>
-      {/* Hero unit */}
       <div className='section'>
         <Box
           sx={{
@@ -127,7 +126,7 @@ export default function Portfolio() {
           </Container>
         </Box>
       </div>
-      <div className='section'>
+      <div className='section' id="Projects">
         <Container sx={{ py: 8 }} maxWidth="md">
           {/* End hero unit */}
           <Grid container spacing={4}>

@@ -14,7 +14,8 @@ body {
 
 /* Hover effect for outlined buttons */
 .MuiButton-outlined:hover {
-  background-color: rgba(209, 217, 225, 0.1); /* This is a very light shade of gray */
+  background-color: rgba(209, 217, 225, 0.1);
+  /* This is a very light shade of gray */
 }
 
 /* Footer styling */
@@ -41,4 +42,9 @@ html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
