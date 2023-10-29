@@ -16,9 +16,9 @@ import uroBackground from './assets/uroBackground.jpg'
 import home from './assets/home.png'
 import icon from './assets/big-brand-icon.jpg'
 import Screenshot3 from './assets/Screenshot3.png'
-import headshot from './assets/headshot.jpg'
 import './App.scss';
 import CustomAppBar from './components/AppBar/AppBar';
+import Hero from './components/hero/Hero';
 
 const cards = [{
   title: "Uro's Journey",
@@ -66,66 +66,9 @@ export default function Portfolio() {
       <CssBaseline />
       <div className="section" id="About">
         <CustomAppBar />
+        <Hero />
       </div>
-      <div className='section'>
-        <Box
-          sx={{
-            bgcolor: 'background.paper',
-            pt: 8,
-            pb: 6,
-          }}
-        >
-          <Container maxWidth="lg">
-            <Typography
-              component="h1"
-              variant="h2"
-              align="center"
-              color="textPrimary"
-              gutterBottom
-            >
-              Samuel Baird
-            </Typography>
-<Box sx={{ display: 'flex', alignItems: 'center', mb: 2, width: '100%' }}>
-  <img 
-    src={headshot} 
-    alt="Profile" 
-    style={{
-      borderRadius: '50%', 
-      width: '400px', 
-      height: '400px',
-      marginRight: '20px',
-      border: '2px solid #2E3B55',
-    }} 
-  />
-  <Typography 
-    sx={{ 
-      flex: 6,  
-      textAlign: 'left', 
-      marginRight: '20px',
-    }} 
-    variant="h6"  
-    color="textSecondary" 
-    paragraph
-  >
-    I am a Full Stack Software Engineer who brings a diverse background in music, art, and entrepreneurship to the table. I offer a unique blend of creativity and technical expertise to every project. In my previous career, I developed the ability to communicate clearly, solve problems creatively, and deliver products that made an impact in people's lives. I aspire to utilize my problem-solving abilities, meticulous attention to detail, and talent for bridging the gap between artistic expression and technical precision to contribute to cutting-edge projects that are both beautiful and impactful.
-              </Typography>
-              </Box>
-            <Stack
-              sx={{ pt: 4 }}
-              direction="row"
-              spacing={2}
-              justifyContent="center"
-            >
-              <Link href="https://www.linkedin.com/in/samuelbaird/" target="_blank" rel="noopener noreferrer" underline="none">
-                <Button variant="contained">LinkedIn</Button>
-              </Link>
-              <Link href="https://github.com/samuelbaird" target="_blank" rel="noopener noreferrer" underline="none">
-                <Button variant="outlined">GitHub</Button>
-              </Link>
-            </Stack>
-          </Container>
-        </Box>
-      </div>
+      
       <div className='section' id="Projects">
         <Container sx={{ py: 8 }} maxWidth="md">
           {/* End hero unit */}
