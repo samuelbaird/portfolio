@@ -11,6 +11,7 @@ const Sidebar = () => {
     const variants = {
         open: {
             clipPath: "circle(1200px at 50px 50px)",
+            zIndex: 2,
             transition: {
                 type: "spring",
                 stiffness: 20,
@@ -23,7 +24,8 @@ const Sidebar = () => {
                     type: "spring",
                     stiffness: 400,
                     damping: 40
-                }
+                },
+                zIndex: 2,
             }
         }
 

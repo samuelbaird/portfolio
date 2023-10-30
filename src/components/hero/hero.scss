@@ -1,3 +1,12 @@
 .hero {
     height: calc(100vh - 100px);
+    position: relative;
+    
+        .particleContainer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100vw;
+        }
 }

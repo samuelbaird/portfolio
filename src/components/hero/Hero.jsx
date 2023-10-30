@@ -9,14 +9,18 @@ import headshot from '../../assets/headshot.jpg'
 import ParticlesContainer from "./particles/Particles";
 const Hero = () => {
   return (
-    <div className='section'>
+      <div className='hero'>
+          <div className="particleContainer">
+          <ParticlesContainer />
+          </div>
+        <div className="aboutContainer">    
         <Box
-          sx={{
+            sx={{
             bgcolor: 'background.paper',
             pt: 8,
             pb: 6,
           }}
-        >
+          >
           <Container maxWidth="lg">
             <Typography
               component="h1"
@@ -27,6 +31,7 @@ const Hero = () => {
             >
               Samuel Baird
             </Typography>
+                  
 <Box sx={{ display: 'flex', alignItems: 'center', mb: 2, width: '100%' }}>
   <img 
     src={headshot} 
@@ -37,6 +42,7 @@ const Hero = () => {
       height: '400px',
       marginRight: '20px',
       border: '2px solid #2E3B55',
+      zIndex: '1',
     }} 
   />
   <Typography 
@@ -66,12 +72,9 @@ const Hero = () => {
               </Link>
             </Stack>
           </Container>
-          </Box>
-          <div>
-              <ParticlesContainer />
-          </div>
-      </div>
-
+              </Box>
+              </div>
+              </div>
   )
 }
 

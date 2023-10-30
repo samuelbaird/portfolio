@@ -19,7 +19,6 @@ import Screenshot3 from './assets/Screenshot3.png'
 import './App.scss';
 import CustomAppBar from './components/AppBar/AppBar';
 import Hero from './components/hero/Hero';
-
 const cards = [{
   title: "Uro's Journey",
   description: 'Browser based platform game.',
@@ -64,7 +63,7 @@ export default function Portfolio() {
   return (
     <ThemeProvider theme={customTheme}>
       <CssBaseline />
-      <div className="section" id="About">
+      <div className="section" id="About" style={{position: 'relative'}}>
         <CustomAppBar />
         <Hero />
       </div>

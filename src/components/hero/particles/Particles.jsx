@@ -1,6 +1,7 @@
 import { Particles } from 'react-tsparticles';
 import { loadFull } from 'tsparticles'
 import { useCallback } from 'react';
+import './particles.scss'
 
 
 const ParticlesContainer = () => {
@@ -37,7 +38,7 @@ const ParticlesContainer = () => {
                             quantity: 90
                         },
                         repulse: {
-                            distance: 200,
+                            distance: 100,
                             duration: 0.4
                         }
                     }
