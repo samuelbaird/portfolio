@@ -7,11 +7,11 @@ import './AppBar.scss';
 
     export default function CustomAppBar() {
         return (
-            <motion.div className='appbar' initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }}>
+            <motion.div className='appbar'>
                 <Sidebar />
-                <div className='wrapper'>
+                <motion.div className='wrapper' initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }}>
                     <span>Software Engineering Portfolio</span>
-                </div>
+                </motion.div>
                 {/* <AppBar color="primary" className='appbar'>
                     <Toolbar>
                         <Typography variant="h6" color="inherit" noWrap>
