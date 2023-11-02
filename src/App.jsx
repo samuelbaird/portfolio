@@ -7,6 +7,8 @@ import './App.scss';
 import CustomAppBar from './components/AppBar/AppBar';
 import Hero from './components/hero/Hero';
 import Portfolio from './components/portfolio/Portfolio';
+import Contact from './components/contact/Contact';
+import Skills from './components/skills/Skills';
 
 const customTheme = createTheme({
   palette: {
@@ -30,6 +32,12 @@ export default function App() {
       </div>
       <div id="Projects">
         <Portfolio />
+      </div>
+      <div className="section" id="Skills">
+        <Skills />
+      </div>
+      <div className="section" id="Contact">
+        <Contact />
       </div>
       {/* Footer */}
       <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">

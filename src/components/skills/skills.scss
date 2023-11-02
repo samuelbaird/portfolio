@@ -1,0 +1,24 @@
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    align-items: center;
+    height: 100vh;
+    margin: 50px;
+
+    .skill {
+        text-align: center;
+
+        img {
+            background-color: #2E3B55;
+            border-radius: 50%;
+            padding: 10px;
+            width: 100px;
+            height: 100px;
+            display: block;
+            margin: 0 auto;
+
+        }
+    }
+}
