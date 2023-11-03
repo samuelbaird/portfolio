@@ -1,7 +1,6 @@
 import './skills.scss'
 import Typography from '@mui/material/Typography';
-import {motion, useAnimation,} from 'framer-motion'
-import { useEffect } from 'react';
+import {motion, useAnimation, useInView} from 'framer-motion'
 
 
 const skills = [
@@ -24,27 +23,47 @@ const skills = [
     { title: 'Framer Motion', icon: 'https://cdn.worldvectorlogo.com/logos/framer-motion.svg'}
 ]
 
+const containerVariants = {
+  animate: {
+    transition: {
+      staggerChildren: 0.1, 
+    },
+  },
+};
+
+const skillVariants = {
+  initial: {
+    y: 100,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      damping: 10,
+      stiffness: 100,
+    },
+  },
+};
+
 const Skills = () => {
-
-    const controls = useAnimation();
-
-    useEffect(() => {
-        controls.start({ y: 0, opacity: 1, transition: { type: 'spring', damping: 10, stiffness: 100 } });
-    }, []);
-    
   return (
-    <div className='skills'>
-          {skills.map((skill, index) => (
-              <motion.div key={index} className='skill' initial={{ y: 100, opacity: 0 }} animate={controls}>
-                  <img className={skill.icon} src={skill.icon}></img>
-                  <Typography variant="subtitle1"
-                    align="center"
-                    color="text.secondary"
-                    component="p" > {skill.title}</Typography>
-                </motion.div>
-            ))}
-    </div>
-  )
-}
+    <motion.div className='skills' variants={containerVariants} initial='initial' animate='animate'>
+      {skills.map((skill, index) => (
+        <motion.div
+          key={index}
+          className='skill'
+          variants={skillVariants}
+        >
+          <img src={skill.icon} alt={skill.title} />
+          <Typography variant="subtitle1" align="center" color="text.secondary" component="p">
+            {skill.title}
+          </Typography>
+        </motion.div>
+      ))}
+    </motion.div>
+  );
+};
 
-export default Skills
+export default Skills;

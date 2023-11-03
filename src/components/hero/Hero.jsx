@@ -32,9 +32,10 @@ const Hero = () => {
               Samuel Baird
             </Typography>
                   
-<Box sx={{ display: 'flex', alignItems: 'center', mb: 2, width: '100%' }}>
+<Box className="aboutBox" sx={{ display: 'flex', alignItems: 'center', mb: 2, width: '100%' }}>
   <img 
     src={headshot} 
+    className="headshot"
     alt="Profile" 
     style={{
       borderRadius: '50%', 
@@ -46,6 +47,7 @@ const Hero = () => {
     }} 
   />
   <Typography 
+    className="aboutMe"
     sx={{ 
       flex: 6,  
       textAlign: 'left', 

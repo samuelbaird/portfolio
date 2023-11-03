@@ -1,3 +1,4 @@
+@import "../../App.scss";
 .contact {
 
     height: 100%;
@@ -7,12 +8,23 @@
     align-items: center;
     gap: 10px;
 
+    @include mobile {
+            width: 100%;
+            padding: 10px;
+            flex-direction: column;
+        }
     .textContainer {
         flex: 1;
         display: flex;
         flex-direction: column;
         gap: 40px;
         align-items: center;
+@include mobile {
+        gap: 20px;
+        text-align: center;
+        align-items: center;
+        margin-top: 70px;
+    }
     }
 
     .formContainer {
@@ -20,6 +32,11 @@
         position: relative;
         margin-right: 40px;
 
+        @include mobile {
+                width: 100%;
+                margin-right: 0;
+                padding: 50px;
+            }
         .mailSvg {
             stroke: #2E3B55;
             margin: auto;
@@ -39,6 +56,9 @@
                 background-color: transparent;
                 border: 1px solid darkgray;
                 border-radius: 5px;
+@include mobile {
+        padding: 10px;
+    }
             }
         }
     }
