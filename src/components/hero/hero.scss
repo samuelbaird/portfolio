@@ -3,7 +3,7 @@
     height: calc(100vh - 100px);
     position: relative;
     overflow: hidden;
-.aboutContainer {
+    .aboutContainer {
         @include mobile {
 
             .headshot {
@@ -23,10 +23,12 @@
     }
     
         .particleContainer {
+            background: linear-gradient(#2E3B55, #ffffff);
             position: absolute;
             top: 0;
             left: 0;
             height: 100vh;
             width: 100vw;
+            z-index: -1;
         }
 }

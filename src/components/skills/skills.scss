@@ -1,12 +1,13 @@
 @import "../../App.scss";
 .skills {
+    max-width: 1020px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     gap: 20px;
     align-items: center;
     height: 100vh;
-    margin: 50px;
+    margin: 50px auto;
 
     .skill {
         text-align: center;

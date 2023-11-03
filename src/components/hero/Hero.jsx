@@ -14,13 +14,7 @@ const Hero = () => {
           <ParticlesContainer />
           </div>
         <div className="aboutContainer">    
-        <Box
-            sx={{
-            bgcolor: 'background.paper',
-            pt: 8,
-            pb: 6,
-          }}
-          >
+
           <Container maxWidth="lg">
             <Typography
               component="h1"
@@ -74,7 +68,7 @@ const Hero = () => {
               </Link>
             </Stack>
           </Container>
-              </Box>
+
               </div>
               </div>
   )
