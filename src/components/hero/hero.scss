@@ -6,6 +6,9 @@
     .aboutContainer {
         @include mobile {
 
+            .name {
+                    font-size: 40px;
+                }
             .headshot {
                 max-width: 200px;
                 max-height: 200px;

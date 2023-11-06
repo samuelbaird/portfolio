@@ -16,7 +16,8 @@ const Hero = () => {
         <div className="aboutContainer">    
 
           <Container maxWidth="lg">
-            <Typography
+          <Typography
+            className="name"
               component="h1"
               variant="h2"
               align="center"

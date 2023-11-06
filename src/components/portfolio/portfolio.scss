@@ -10,7 +10,8 @@
         padding-top: 50px;
 
         @include mobile {
-                padding-top: calc(100vh - 150px);
+                display: none;
+                    transform: none !important;
             }
         .progressBar {
             height: 10px;
