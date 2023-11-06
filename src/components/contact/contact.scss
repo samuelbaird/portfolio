@@ -19,6 +19,7 @@
         flex-direction: column;
         gap: 40px;
         align-items: center;
+        
 @include mobile {
         gap: 20px;
         text-align: center;
@@ -42,6 +43,9 @@
             margin: auto;
             position: absolute;
             z-index: -1;
+@include mobile {
+        display: none;
+    }
         }
 
         form {
