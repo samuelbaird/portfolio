@@ -6,20 +6,28 @@ import { useRef } from "react";
 import emailjs from '@emailjs/browser';
 import { useState } from "react";
 
-const variants = {
-    initial: {
-        y: 500,
-        opacity: 0,
-    },
-    animate: {
-        y: 0,
-        opacity: 1,
-        transition: {
-            duration: 0.5,
-            staggerChildren: 0.1,
+const isMobile = window.innerWidth < 738;
+
+let variants = {}
+
+if (!isMobile) {
+    variants = {
+        initial: {
+            y: 500,
+            opacity: 0,
+        },
+        animate: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                duration: 0.5,
+                staggerChildren: 0.1,
+            }
         }
-    }
+    };
 }
+
+
 
 const Contact = () => {
 

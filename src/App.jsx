@@ -9,6 +9,7 @@ import Hero from './components/hero/Hero';
 import Portfolio from './components/portfolio/Portfolio';
 import Contact from './components/contact/Contact';
 import Skills from './components/skills/Skills';
+import Parallax from './components/parallax/Parallax';
 
 const customTheme = createTheme({
   palette: {
@@ -31,10 +32,18 @@ export default function App() {
         <Hero />
       </div>
       <div id="Projects">
+        <div className="section" type="portfolio">
+          <Parallax type="portfolio"/>
+        </div>
         <Portfolio />
       </div>
-      <div className="section" id="Skills">
+      <div id="Skills">
+        <div className="section">
+          <Parallax type="skills" />
+        </div>
+        <div className="section">
         <Skills />
+        </div>
       </div>
       <div className="section" id="Contact">
         <Contact />
