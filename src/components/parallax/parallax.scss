@@ -1,5 +1,5 @@
 .parallax {
-    background: linear-gradient(#2E3B55, #ffffff);
+    background: linear-gradient(#FFFFFF, #2E3B55);
     width: 100%;
     height: 100%;
     position: relative;
@@ -7,8 +7,9 @@
     justify-content: center;
     align-items: center;
 
-    .title {
+    .textContainer {
         padding-bottom: 70px;
+        z-index: 2;
     }
 
     .mountains {
@@ -18,11 +19,16 @@
         width: 100%;
         height: 100%;
         position: absolute;
+        z-index: 3;
     }
-
-    .particleContainer {
-        position: absolute;
-        width: 100%;
-        height: 100%;
+.stars {
+    background-image: url('../../assets/AdobeStock_480411716.jpeg');
+    background-size: contain;
+    background-position: top;
+    height: 100%;
+    width: 250%;
+    position: absolute;
+    z-index: 1;
+        opacity: 0.3;
     }
 }
